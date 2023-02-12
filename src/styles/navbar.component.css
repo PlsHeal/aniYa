@@ -1,0 +1,21 @@
+nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    margin-right: 1rem;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.navbar-brand > span {
+    color: green;
+}
+
+.nav-link:hover > span  {
+    color: green;
+}
+
+.navbar-nav {
+    font-size: 1rem;
+}

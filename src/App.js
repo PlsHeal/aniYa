@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar.components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PopularSection from "./components/popular.components";
+import RecentSection from "./components/recent.components";
+import AnimeSection from "./components/anime.components";
+import MangaSection from "./components/manga.components";
+import OtherSection from "./components/others.components";
+import ProfileSection from "./components/profile.components";
+import MainSection from "./components/main.components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div className="container" style={{marginTop: "56px"}}>
+        <Routes>
+          <Route path="/" element={<MainSection />} />
+          <Route path="/popular" element={<PopularSection />} />
+          <Route path="/recent" element={<RecentSection />} />
+          <Route path="/anime" element={<AnimeSection />} />
+          <Route path="/manga" element={<MangaSection />} />
+          <Route path="/others" element={<OtherSection />} />
+          <Route path="/profile" element={<ProfileSection />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
