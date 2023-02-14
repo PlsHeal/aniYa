@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="container" style={{marginTop: "56px"}}>
+      <div className="container" style={{marginTop: "80px"}}>
         <Routes>
           <Route path="/" element={<MainSection />} />
           <Route path="/popular" element={<PopularSection />} />
