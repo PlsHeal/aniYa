@@ -16,6 +16,10 @@ nav {
     color: green;
 }
 
+.nav-link:focus > span {
+    color: green;
+}
+
 .navbar-nav {
     font-size: 1rem;
 }

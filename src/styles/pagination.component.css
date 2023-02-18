@@ -1,0 +1,15 @@
+.pagination .page-link {
+    color: green;
+    background-color: white;
+    border-color: seagreen;
+  }
+  
+.pagination .page-link:hover {
+    color: #fff;
+    background-color: seagreen;
+    border-color: green;
+  }
+
+.pagination .page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(3, 131, 52, 0.25);
+  }
