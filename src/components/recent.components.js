@@ -22,7 +22,7 @@ function CardSection(props) {
 export default function RecentSection() {
     const [popular, setPopular] = useState([]);
 
-    const fetchPopularAnime = async(arr) => {
+    const fetchRecentAnime = async(arr) => {
         return await new Promise((resolve, reject) => {
             let date = new Date();
             let day = date.toJSON();
@@ -40,7 +40,7 @@ export default function RecentSection() {
     }
     
     useEffect(() => {
-        fetchPopularAnime()
+        fetchRecentAnime()
         .then((arr => setPopular(arr.data)))
         .catch(err => console.log(err))
     }, [])

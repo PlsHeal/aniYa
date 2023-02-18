@@ -11,8 +11,8 @@ function CardSection(props) {
                 <img className="card-img-top" style={{height: "120px", objectFit: "cover"}} src={props.data.attributes.coverImage.large} alt="Card cap" />
                 <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <p className="card-text" >{(synopsis.length > 150) ? synopsis.substring(0, 150) + "..." : synopsis}</p>
-                <Link to="#" class="btn btn-success">Find more...</Link>
+                <p className="card-text" style={{color: "grey"}}>{(synopsis.length > 150) ? synopsis.substring(0, 150) + "..." : synopsis}</p>
+                <Link to="#" class="btn btn-success">Find more</Link>
                 </div>
             </div>
         </div>
