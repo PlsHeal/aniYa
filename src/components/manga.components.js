@@ -1,21 +1,33 @@
 import { Link } from "react-router-dom";
-import "../styles/pagination.component.css"
+import "../styles/pagination.component.css";
+import $ from "jquery";
 
 function Pagination() {
+
+    function onActive() {
+        $('.page-link').on('click', function() {
+            // Remove active class from all page-items
+            $('.page-item').removeClass('active');
+          
+            // Add active class to the clicked page-item
+            $(this).parent().addClass('active');
+        });
+    }
+
     return (
-        <nav aria-label="Page navigation example" style={{display: "grid", placeItems: "center"}}>
-            <ul className="pagination">
-                <li className="page-item"><Link className="page-link" href="#">        
+        <nav aria-label="Page navigation example">
+            <ul className="pagination justify-content-center" onClick={onActive}>
+                <li className="page-item disabled" id="previousPage"><Link className="page-link" tabIndex="-1" to="#">        
                     <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
+                    <span className="sr-only">Previous</span>
                     </Link>
                 </li>
-                <li className="page-item"><Link className="page-link" href="#">1</Link></li>
-                <li className="page-item"><Link className="page-link" href="#">2</Link></li>
-                <li className="page-item"><Link className="page-link" href="#">3</Link></li>
-                <li className="page-item"><Link className="page-link" href="#">        
+                <li className="page-item active"><Link className="page-link" to="#">1</Link></li>
+                <li className="page-item"><Link className="page-link" to="#">2</Link></li>
+                <li className="page-item"><Link className="page-link" to="#">3</Link></li>
+                <li className="page-item"><Link className="page-link" to="#">        
                 <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
+                <span className="sr-only">Next</span>
                     </Link>
                 </li>
             </ul>
